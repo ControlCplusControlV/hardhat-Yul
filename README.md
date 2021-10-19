@@ -26,6 +26,10 @@ import "./Plugin/src";
 
 Now you have a fully setup Hardhat Yul+ Project!
 
+## Quick debugging
+
+You may need to install some js packages, namely "solc" and "yulp", however a quick npm install will fix this
+
 ## Why Yul+?
 
 Yul+ is an amazing language that brings the efficiency gains of Yul by allowing explicit memory control, with features that increase ease of use, and a sig"" function allowing the generate ABI to be identical to that of a Solidity Contract. Yul+ was initially developed by Fuel Labs as they built out their l2 platform, and showed some impressive gas reductions, dropping the cost of the ENS by around 20%!
