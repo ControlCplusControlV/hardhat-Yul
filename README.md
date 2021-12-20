@@ -1,5 +1,9 @@
 
-# Yul and Yul+ Hardhat Plugin
+# Deprecated in favor of yul-log, development will continue there
+
+Find [yul log](https://github.com/ControlCplusControlV/Yul-Log) on my Github or via that link
+
+## Yul and Yul+ Hardhat Plugin
 
 This a plugin for hardhat that allows the compilation of .yul and .yulp files. They are compiled into solc artifacts (Thanks to Yul+'s sig"" function) and are mostly identical to work with from there. Its important to note this plugin is still very much in the beta, and artifacts may need to cleared after each compile. Some changes must be made to the config file as well to get it working
 
