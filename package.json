@@ -1,12 +1,15 @@
 {
   "name": "@tovarishfin/hardhat-yul",
-  "version": "3.0.0",
+  "version": "3.0.2",
   "description": "Hardhat plugin to develop smart contracts in Yul",
-  "repository": "github:tovarishfin/hardhat-yul",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tovarishfin/hardhat-yul.git"
+  },
   "homepage": "https://github.com/TovarishFin/hardhat-yul",
   "author": "TovarishFin",
   "license": "MIT",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "keywords": [
     "ethereum",
     "smart-contracts",
@@ -24,8 +27,8 @@
     "clean": "rimraf dist"
   },
   "files": [
-    "dist/src/",
-    "src/",
+    "dist/*",
+    "src/*",
     "LICENSE",
     "README.md"
   ],
@@ -59,5 +62,8 @@
   },
   "peerDependencies": {
     "hardhat": "^2.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/tovarishfin/hardhat-yul/issues"
   }
 }
