@@ -1,45 +1,58 @@
+# hardhat-yul
 
-# Deprecated in favor of yul-log, development will continue there
+[![npm](https://img.shields.io/npm/v/@tovarishfin/hardhat-yul.svg)](https://www.npmjs.com/package/@tovarishfin/hardhat-yul) [![hardhat](https://hardhat.org/buidler-plugin-badge.svg?1)](https://hardhat.org)
 
-Find [yul log](https://github.com/ControlCplusControlV/Yul-Log) on my Github or via that link
+[Hardhat](https://hardhat.org) plugin to develop smart contracts with Yul and/or Yul+.
 
-## Yul and Yul+ Hardhat Plugin
+## What
 
-This a plugin for hardhat that allows the compilation of .yul and .yulp files. They are compiled into solc artifacts (Thanks to Yul+'s sig"" function) and are mostly identical to work with from there. Its important to note this plugin is still very much in the beta, and artifacts may need to cleared after each compile. Some changes must be made to the config file as well to get it working
+This plugin adds support for Yul and Yul+ to Hardhat. Once installed, Yul contracts can be compiled by running the `compile` task.
 
-## Setting up a Yul+ Hardhat Project
+The Yul compiler is run using the [official solc compiler](https://github.com/ethereum/solc-js#readme).
 
-First run
-```
-npx hardhat init
-```
+The Yul+ compiler is run using the [Yul+ transpiler from FuelLabs](https://github.com/FuelLabs/yulp) before being passed to the Yul compiler.
 
-and create a new typescript project.
+## Installation
 
-Next, edit your tsconfig.ts file and add the following compiler options
-```
-    "allowJs": true,
-    "noImplicitAny": false
-```
-Next, clone this repo and put it all in a "Plugin Folder", then drop this folder into the root of your project directory.
+First, you need to install the plugin by running
 
-Then, in your hardhatconfig.ts file, add 
-```
-import "./Plugin/src";
+```bash
+npm install --save-dev @tovarishfin/hardhat-yul
 ```
 
-Now you have a fully setup Hardhat Yul+ Project!
+And add the following statement to your `hardhat.config.js`:
 
-## Quick debugging
+```js
+require("@tovarishfin/hardhat-yul");
+```
 
-You may need to install some js packages, namely "solc" and "yulp", however a quick npm install will fix this
+Or, if you are using TypeScript, add this to your `hardhat.config.ts`:
 
-## Why Yul+?
+```ts
+import "@tovarishfin/hardhat-yul";
+```
 
-Yul+ is an amazing language that brings the efficiency gains of Yul by allowing explicit memory control, with features that increase ease of use, and a sig"" function allowing the generate ABI to be identical to that of a Solidity Contract. Yul+ was initially developed by Fuel Labs as they built out their l2 platform, and showed some impressive gas reductions, dropping the cost of the ENS by around 20%!
+## Required plugins
 
-Understanding the intermediate language of Yul as well will also improve the efficiency of some segments of Solidity you write with the inline assembly options.
+No plugins dependencies.
 
-## Community
+## Tasks
 
-I hope to build out more of the Yul+ Community, I will be setting up more later, but as for now feel free to add a PR to this plugin, or add to the tag on Github to increase the number of resources avaliable. I will also be making a tutorial series for people looking to learn the Yul+ language.
+This plugin creates no additional tasks.
+
+## Environment extensions
+
+This plugin does not extend the Hardhat Runtime Environment.
+
+## Configuration
+
+At the time, there are no configuration options. This might change in the future.
+
+## Usage
+
+There are no additional steps you need to take for this plugin to work.
+
+### Additional notes
+
+This is a fork of [ControlCplusControlV's work](https://github.com/ControlCplusControlV/hardhat-Yul) which no longer seems to be working.
+There are no tests for this plugin and there are no plans for it :)
