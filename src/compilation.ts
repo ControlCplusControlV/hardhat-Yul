@@ -86,7 +86,7 @@ function getArtifactFromYulOutput(sourceName: string, output: any): Artifact {
     _format: "hh-sol-artifact-1", // sig"function add()" makes this work
     contractName,
     sourceName,
-    abi: output.abi,
+    abi: [], // FIXME: create a proper abi which will work with typechain etc...
     bytecode: output.bytecode,
     deployedBytecode: output.bytecode_runtime,
     linkReferences: {},
@@ -133,7 +133,7 @@ async function _compileYul(filepath: string, filename: string) {
   const contractCompiled = {
     _format: "hh-sol-artifact-1",
     sourceName: filename,
-    abi: null,
+    abi: [], // needs to be an empty array to not cause issues with typechain
     bytecode: bytecode,
   };
 
