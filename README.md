@@ -54,5 +54,4 @@ There are no additional steps you need to take for this plugin to work.
 
 ### Additional notes
 
-This is a fork of [ControlCplusControlV's work](https://github.com/ControlCplusControlV/hardhat-Yul) which no longer seems to be working.
-There are no tests for this plugin and there are no plans for it :)
+This is mainly working because of TovarishFin and his fork. I merged his work upstream so that the working plugin shows up because of SEO, but if you encounter issues with this plugin please defer to there
